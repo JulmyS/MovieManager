@@ -21,6 +21,16 @@ public class Person {
     public Person() {
     }
 
+    public Person(Long id, String firstName, String lastName) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+    
+    public void addMovie(Movie movie){
+        this.listeFilm.add(movie);
+    }
+
     public Long getId() {
         return id;
     }

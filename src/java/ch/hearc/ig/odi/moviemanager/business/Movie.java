@@ -21,6 +21,14 @@ public class Movie {
     public Movie() {
     }
 
+    public Movie(Long id, String name, String producer) {
+        this.id = id;
+        this.name = name;
+        this.producer = producer;
+    }
+    
+    
+
     public Long getId() {
         return id;
     }
