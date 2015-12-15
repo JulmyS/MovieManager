@@ -23,12 +23,17 @@ public class PersonManagedBean implements Serializable {
 
     @Inject
     Services services;
-    
+
     private List<Person> people;
 
     public PersonManagedBean() {
     }
 
+    /**
+     * Récupère la liste des personnes
+     *
+     * @return la liste en question
+     */
     public List<Person> getPeople() {
         return this.services.getPeopleList();
     }
@@ -37,9 +42,4 @@ public class PersonManagedBean implements Serializable {
         this.people = people;
     }
 
-    
-    
-    
-    
-    
 }

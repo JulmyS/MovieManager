@@ -29,6 +29,11 @@ public class PersonDetailManagedBean implements Serializable{
     public PersonDetailManagedBean() {
     }
 
+    /**
+     * Méthode qui enregistre la personne en mémoire
+     * @param id
+     * @return 
+     */
     public String savePerson(int id) {
         for (Person pers : services.getPeopleList()) {
             if(pers.getId() == id){
