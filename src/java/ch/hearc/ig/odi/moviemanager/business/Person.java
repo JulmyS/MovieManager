@@ -7,7 +7,6 @@ package ch.hearc.ig.odi.moviemanager.business;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 /**
  *
@@ -19,6 +18,7 @@ public class Person {
     private String firstName;
     private String lastName;
     private List<Movie> movies;
+    private int size;
 
     public Person() {
         this.movies = new ArrayList<>();
@@ -66,4 +66,10 @@ public class Person {
     public void setMovies(List<Movie> movies) {
         this.movies = movies;
     }
+
+    public int getSize() {
+        return this.movies.size();
+    }
+    
+    
 }

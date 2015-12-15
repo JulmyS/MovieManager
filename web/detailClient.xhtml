@@ -7,10 +7,13 @@
         <title>Facelet Title</title>
     </h:head>
     <h:body>
-        <h1>Liste des clients</h1>
-        <f:view>
+        <h2>Client details</h2>
+        <h:outputText value="Numero : " /><h:outputText value="#{personDetail.person.id}" /><br />
+        <h:outputText value="FirstName : " /><h:outputText value="#{personDetail.person.firstName}" /><br />
+        <h:outputText value="Lastname : " /><h:outputText value="#{personDetail.person.lastName}" />
+            <h3>Liste des films visionés</h3>
             <h:form>
-                <h:dataTable value="#{people.people}" var="item">
+                <h:dataTable class="table table-bordered" value="#{personDetail.person.movies}" var="item" cellspacing="4">
                     <h:column>
                         <f:facet name="header">
                             <h:outputText value="ID" />
@@ -19,29 +22,19 @@
                     </h:column>
                     <h:column>
                         <f:facet name="header">
-                            <h:outputText value="Nom" />
+                            <h:outputText value="Name" />
                         </f:facet>
-                        <h:outputText value="#{item.lastName}"/>
+                        <h:outputText value="#{item.name}"/>
                     </h:column>
                     <h:column>
                         <f:facet name="header">
-                            <h:outputText value="Prenom" />
+                            <h:outputText value="Producer" />
                         </f:facet>
-                        <h:outputText value="#{item.firstName}"/>
-                    </h:column>
-                    <h:column>
-                        <f:facet name="header">
-                            <h:outputText value="Nombre de film" />
-                        </f:facet>
-                        <h:outputText value="#{item.size}"/>
-                    </h:column>
-                    <h:column>
-                        <h:commandLink value="Details" action="#{personDetail.savePerson(item.id)}"/>
+                        <h:outputText value="#{item.producer}" />
                     </h:column>
                 </h:dataTable>
+                <h:button class="btn btn-default" value="Cancel" outcome="customersList" />
             </h:form>
-        </f:view>
-
     </h:body>
 </html>
 
