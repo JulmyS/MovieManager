@@ -25,9 +25,15 @@ public class FilmDetailManagedBean implements Serializable {
     
     private Movie movie;
     
+
     public FilmDetailManagedBean() {
     }
     
+    /**
+     * Sauvegarde le film en mémoire
+     * @param id
+     * @return 
+     */
     public String saveMovie(int id){
         for (Movie mov : services.getMoviesList()) {
             if(mov.getId() == id){
