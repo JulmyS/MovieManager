@@ -5,7 +5,9 @@
  */
 package ch.hearc.ig.odi.moviemanager.business;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 /**
  *
@@ -16,19 +18,21 @@ public class Person {
     private Long id;
     private String firstName;
     private String lastName;
-    private List<Movie> listeFilm;
+    private List<Movie> movies;
 
     public Person() {
+        this.movies = new ArrayList<>();
     }
 
     public Person(Long id, String firstName, String lastName) {
+        this();
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
     }
     
     public void addMovie(Movie movie){
-        this.listeFilm.add(movie);
+        this.movies.add(movie);
     }
 
     public Long getId() {
@@ -55,14 +59,11 @@ public class Person {
         this.lastName = lastName;
     }
 
-    public List<Movie> getListeFilm() {
-        return listeFilm;
+    public List<Movie> getMovies() {
+        return movies;
     }
 
-    public void setListeFilm(List<Movie> listeFilm) {
-        this.listeFilm = listeFilm;
+    public void setMovies(List<Movie> movies) {
+        this.movies = movies;
     }
-    
-    
-    
 }
