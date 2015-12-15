@@ -24,7 +24,7 @@
                         <f:facet name="header">
                             <h:outputText value="Name" />
                         </f:facet>
-                        <h:outputText value="#{item.name}"/>
+                        <h:commandLink value="#{item.name}" action="#{filmDetail.saveMovie(item.id)}"/>
                     </h:column>
                     <h:column>
                         <f:facet name="header">

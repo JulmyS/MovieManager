@@ -54,6 +54,14 @@ public class Movie {
         this.producer = producer;
     }
 
+    public List<Person> getPeople() {
+        return people;
+    }
+
+    public void setPeople(List<Person> people) {
+        this.people = people;
+    }
+
     
     
 }

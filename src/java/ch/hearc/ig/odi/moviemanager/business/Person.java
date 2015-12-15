@@ -32,6 +32,7 @@ public class Person {
     }
     
     public void addMovie(Movie movie){
+        movie.getPeople().add(this);
         this.movies.add(movie);
     }
 

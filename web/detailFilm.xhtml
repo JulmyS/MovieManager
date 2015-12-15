@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h2>Film details</h2>
+        <h:outputText value="ID : " /><h:outputText value="#{filmDetail.movie.id}" /><br />
+        <h:outputText value="Name : " /><h:outputText value="#{filmDetail.movie.name}" /><br />
+        <h:outputText value="Producer : " /><h:outputText value="#{filmDetail.movie.producer}" />
+        <h3>Liste des personnes ayant visioné le film</h3>
+        <h:form>
+            <h:dataTable class="table table-bordered" value="#{filmDetail.movie.people}" var="item" cellspacing="4">
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="ID" />
+                    </f:facet>
+                    <h:outputText value="#{item.id}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="FirstName" />
+                    </f:facet>
+                    <h:outputText value="#{item.firstName}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="LastName" />
+                    </f:facet>
+                    <h:outputText value="#{item.lastName}" />
+                </h:column>
+            </h:dataTable>
+            <h:button class="btn btn-default" value="Cancel" outcome="index" />
+        </h:form>
+    </h:body>
+</html>
+
