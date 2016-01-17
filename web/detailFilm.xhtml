@@ -24,7 +24,7 @@
                     <f:facet name="header">
                         <h:outputText value="FirstName" />
                     </f:facet>
-                    <h:outputText value="#{item.firstName}"/>
+                    <h:commandLink value="#{item.firstName}" action="#{personDetail.savePerson(item.id)}"/>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
